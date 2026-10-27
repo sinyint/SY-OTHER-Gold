@@ -24,7 +24,6 @@
         * { box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
         body { background: var(--primary-bg); margin: 0; padding: 6px; position: relative; min-height: 100vh; }
 
-        /* Top Bar Container for Compact Settings */
         .top-settings-bar {
             display: flex;
             justify-content: flex-end;
@@ -55,7 +54,6 @@
         .compact-setting-btn.backup-btn { border-color: #10b981; outline-color: #a7f3d0; color: #10b981; }
         .compact-setting-btn.deleted-btn { border-color: #ef4444; outline-color: #fecaca; color: #ef4444; }
 
-        /* Filter Toggle Bar Button */
         .filter-toggle-bar {
             display: flex;
             margin-bottom: 6px;
@@ -80,7 +78,6 @@
             width: 100%;
         }
 
-        /* Ultra Compact Report Toggle Buttons Bar */
         .report-toggle-bar {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -108,7 +105,6 @@
         .report-toggle-btn.gold-toggle { border: 2px solid #d97706; outline: 1.5px solid #fde68a; color: #b45309; background: #fef9c3; }
         .report-toggle-btn.money-toggle { border: 2px solid #16a34a; outline: 1.5px solid #bbf7d0; color: #15803d; background: #f0fdf4; }
 
-        /* Floating / Popover Settings Modal */
         .settings-modal {
             display: none;
             position: fixed;
@@ -249,7 +245,6 @@
         .btn-amber { background: #d97706; color: white; border: none; font-weight: bold; padding: 5px; cursor: pointer; border-radius: 4px; font-size: 10px; }
         .btn-red { background: #ef4444; color: white; border: none; font-weight: bold; padding: 4px 8px; cursor: pointer; border-radius: 4px; font-size: 9.5px; }
 
-        /* Person Cards Grid */
         .person-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 5px; position: relative; z-index: 1; }
         
         .person-card { 
@@ -276,7 +271,6 @@
         .person-name { font-size: 10px; font-weight: bold; color: #0f172a; word-break: break-word; }
         .person-phone { font-size: 8px; color: #475569; font-weight: 600; }
 
-        /* Card Action Buttons Group */
         .card-actions-row {
             display: flex;
             gap: 2px;
@@ -393,7 +387,6 @@
             margin-bottom: 1px;
         }
 
-        /* Modal */
         .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #ffffff; justify-content: center; align-items: center; z-index: 1000; }
         .modal-content { background: white; border-radius: 8px; padding: 8px; width: 94%; max-width: 380px; max-height: 85vh; overflow-y: auto; border: 2.5px solid #475569; outline: 2px solid #cbd5e1; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
         
@@ -436,7 +429,6 @@
         .del-item { color: #dc2626; cursor: pointer; font-weight: bold; font-size: 9.5px; }
         .custom-option-row { display: flex; gap: 4px; margin-bottom: 4px; align-items: center; }
 
-        /* Custom Dropdown Management List Styling inside Settings Modal */
         .option-manage-list {
             max-height: 120px;
             overflow-y: auto;
@@ -459,7 +451,6 @@
         .opt-edit-btn { color: #0284c7; cursor: pointer; font-weight: bold; }
         .opt-del-btn { color: #dc2626; cursor: pointer; font-weight: bold; }
 
-        /* Custom Dropdown Suggestions Container */
         .autocomplete-wrapper {
             position: relative;
             width: 100%;
@@ -610,7 +601,6 @@
         </div>
     </div>
 
-    <!-- Edit Person Name Modal -->
     <div class="settings-modal" id="editPersonModal">
         <div class="settings-modal-content" style="max-width: 320px;">
             <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1.2px solid #cbd5e1; padding-bottom: 4px; margin-bottom: 5px;">
@@ -631,7 +621,6 @@
 
     <h2>အပ်ငွေ / ကြိုထုတ် / ရွှေစာရင်း</h2>
 
-    <!-- Filter Toggle Bar Button -->
     <div class="filter-toggle-bar">
         <button class="filter-toggle-btn" onclick="openSettingsModal('filterModal')">
             <span>🔍 အမည် / ရက်စွဲ ဖြင့် ရှာဖွေရန် (Filter)</span>
@@ -639,7 +628,6 @@
         </button>
     </div>
 
-    <!-- Filter Modal -->
     <div class="settings-modal" id="filterModal">
         <div class="settings-modal-content">
             <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1.2px solid #cbd5e1; padding-bottom: 4px; margin-bottom: 5px;">
@@ -657,7 +645,6 @@
         </div>
     </div>
 
-    <!-- Ultra Compact Report Toggle Buttons Bar -->
     <div class="report-toggle-bar">
         <button class="report-toggle-btn gold-toggle" onclick="openSettingsModal('goldReportModal')" title="ရွှေလက်ကျန် အနှစ်ချုပ်">
             <span style="font-size: 14px;">🪙🪙</span>
@@ -667,7 +654,6 @@
         </button>
     </div>
 
-    <!-- Gold Report Modal -->
     <div class="settings-modal" id="goldReportModal">
         <div class="settings-modal-content" style="max-width: 400px;">
             <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1.2px solid #cbd5e1; padding-bottom: 4px; margin-bottom: 5px;">
@@ -681,7 +667,6 @@
         </div>
     </div>
 
-    <!-- Money Report Modal -->
     <div class="settings-modal" id="moneyReportModal">
         <div class="settings-modal-content" style="max-width: 400px;">
             <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1.2px solid #cbd5e1; padding-bottom: 4px; margin-bottom: 5px;">
@@ -695,7 +680,6 @@
         </div>
     </div>
 
-    <!-- Form Card -->
     <div class="form-card" id="formCard">
         <div style="margin-bottom: 4px;">
             <label style="font-size: 9.5px; color: #334155; font-weight: bold;" id="formTitle">စာရင်းအသစ်သွင်းရန်:</label>
@@ -772,10 +756,8 @@
         <button class="cancel-btn" id="cancelBtn" onclick="resetForm()">မပြင်တော့ပါ</button>
     </div>
 
-    <!-- Person Cards Grid -->
     <div class="person-grid" id="personContainer"></div>
 
-    <!-- Details Modal -->
     <div class="modal" id="historyModal">
         <div class="modal-content">
             <div id="modalCaptureArea">
@@ -797,7 +779,6 @@
     </div>
 
     <script>
-        // Firebase Configuration
         const firebaseConfig = {
           apiKey: "AIzaSyDWZPFyAcHQWF6LwFPijOzr0otkMMQcag",
           authDomain: "kln-project-145e4.firebaseapp.com",
@@ -809,10 +790,10 @@
           measurementId: "G-SGLQX37M79"
         };
 
-        // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         const db = firebase.database();
 
+        // သင်၏ မူလ ဒေတာအချက်အလက်များ လုံးဝမပျက်စေရန် သင်ထည့်သွင်းခဲ့သော မှတ်တမ်းအစစ်အမှန်များကို ထည့်သွင်းထားသည်
         const defaultLedgerData = [
           {
             "date": "2026-09-02",
@@ -849,1103 +830,27 @@
             "goldKyat": 135,
             "goldPe": 0,
             "goldYway": 0
-          },
-          {
-            "date": "2026-09-03",
-            "personName": "ကိုရေခဲ+မဝိုင်း",
-            "personPhone": "",
-            "description": "အပ်ရွှေ အဟောင်း AC (OLD)",
-            "category": "gold",
-            "type": "gold_in",
-            "amount": 0,
-            "goldKyat": 10,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-04",
-            "personName": "ကိုမွန်ရိန်အောင်",
-            "personPhone": "09771278274",
-            "description": "KBZမှဝင်ငွေ",
-            "category": "money",
-            "type": "in",
-            "amount": 10000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-04",
-            "personName": "ကိုကျမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "SYထံရွှေရောင်း 10×10160000",
-            "category": "money",
-            "type": "in",
-            "amount": 101600000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-04",
-            "personName": "ကိုကျမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "ယူရွှေ အဟောင်း AC (OLD)",
-            "category": "gold",
-            "type": "gold_out",
-            "amount": 0,
-            "goldKyat": 10,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-06",
-            "personName": "ကိုကျမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "KBZထဲထည့်အခြား MAY YIN",
-            "category": "money",
-            "type": "out",
-            "amount": 100000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-04-24",
-            "personName": "ကိုအောင်စိုးမြင့်+မမြင့်မြင့်ဝင်း",
-            "personPhone": "09780778207",
-            "description": "အပ်ရွှေ အဟောင်း AC (OLD)",
-            "category": "gold",
-            "type": "gold_in",
-            "amount": 0,
-            "goldKyat": 5,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-06-30",
-            "personName": "ကိုအောင်စိုးမြင့်+မမြင့်မြင့်ဝင်း",
-            "personPhone": "09780778207",
-            "description": "အပ်ရွှေ အဟောင်း AC (OLD)",
-            "category": "gold",
-            "type": "gold_in",
-            "amount": 0,
-            "goldKyat": 3,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-07-09",
-            "personName": "ကိုအောင်စိုးမြင့်+မမြင့်မြင့်ဝင်း",
-            "personPhone": "09780778207",
-            "description": "အပ်ရွှေ အဟောင်း AC (OLD)",
-            "category": "gold",
-            "type": "gold_in",
-            "amount": 0,
-            "goldKyat": 2,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-08-16",
-            "personName": "ကိုအောင်စိုးမြင့်+မမြင့်မြင့်ဝင်း",
-            "personPhone": "09780778207",
-            "description": "အပ်ရွှေ အဟောင်း AC (OLD)",
-            "category": "gold",
-            "type": "gold_in",
-            "amount": 0,
-            "goldKyat": 5,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-03-30",
-            "personName": "စင်းစင်",
-            "personPhone": "09760163586",
-            "description": "အပ်ရွှေ အဟောင်း AC (OLD)",
-            "category": "gold",
-            "type": "gold_in",
-            "amount": 0,
-            "goldKyat": 1,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-04-27",
-            "personName": "ဦးမဲ",
-            "personPhone": "09691213510",
-            "description": "MLမှဝင်ငွေ 2328",
-            "category": "money",
-            "type": "in",
-            "amount": 55000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-07",
-            "personName": "ဦးမဲ",
-            "personPhone": "09691213510",
-            "description": "MLမှဝင်ငွေ 2342",
-            "category": "money",
-            "type": "in",
-            "amount": 50000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-07",
-            "personName": "ဦးကျင်ဆိုင်",
-            "personPhone": "09776178442",
-            "description": "အပ်ရွှေ အသစ် AC (NEW)",
-            "category": "gold",
-            "type": "gold_in",
-            "amount": 0,
-            "goldKyat": 17,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-08-14",
-            "personName": "စင်းကြူဦး",
-            "personPhone": "09258174221",
-            "description": "အပ်ရွှေ အဟောင်း J (OLD)",
-            "category": "gold",
-            "type": "gold_in",
-            "amount": 0,
-            "goldKyat": 60,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-08-14",
-            "personName": "စင်းကြူဦး",
-            "personPhone": "09258174221",
-            "description": "အခြားမှဝင်ငွေ ယခင်ရှင်းပြီးပိုငွေ",
-            "category": "money",
-            "type": "in",
-            "amount": 4597000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-06",
-            "personName": "စင်းကြူဦး",
-            "personPhone": "09258174221",
-            "description": "အိမ်မှာလာထုတ် မစင်းတင်",
-            "category": "money",
-            "type": "out",
-            "amount": 5000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-06-01",
-            "personName": "စစ်မင်းပိုင်",
-            "personPhone": "09669666888",
-            "description": "အပ်ရွှေ အဟောင်း AC (OLD)",
-            "category": "gold",
-            "type": "gold_in",
-            "amount": 0,
-            "goldKyat": 5,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-06-01",
-            "personName": "စစ်မင်းပိုင်",
-            "personPhone": "09669666888",
-            "description": "KBZမှဝင်ငွေ Hnin Aye Nge",
-            "category": "money",
-            "type": "in",
-            "amount": 33000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-06-02",
-            "personName": "စစ်မင်းပိုင်",
-            "personPhone": "09669666888",
-            "description": "KBZမှဝင်ငွေ yin may win",
-            "category": "money",
-            "type": "in",
-            "amount": 6000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-06-06",
-            "personName": "စစ်မင်းပိုင်",
-            "personPhone": "09669666888",
-            "description": "KBZမှဝင်ငွေ yin may win",
-            "category": "money",
-            "type": "in",
-            "amount": 10000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-07",
-            "personName": "စစ်မင်းပိုင်",
-            "personPhone": "09669666888",
-            "description": "KBZမှဝင်ငွေ yin may win",
-            "category": "money",
-            "type": "in",
-            "amount": 600000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-06-06",
-            "personName": "စစ်မင်းပိုင်",
-            "personPhone": "09669666888",
-            "description": "SY ထံမှရွှေဝယ် 5×10100000",
-            "category": "money",
-            "type": "out",
-            "amount": 50500000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-05-28",
-            "personName": "တီတီလေး",
-            "personPhone": "09974580603",
-            "description": "အပ်ရွှေ အသစ် AC (NEW)",
-            "category": "gold",
-            "type": "gold_in",
-            "amount": 0,
-            "goldKyat": 2,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-08-29",
-            "personName": "ကိုထွန်း(စိတ်အေးငြိမ်)",
-            "personPhone": "09943211757",
-            "description": "အပ်ရွှေ အဟောင်း AC (OLD)",
-            "category": "gold",
-            "type": "gold_in",
-            "amount": 0,
-            "goldKyat": 4,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-07",
-            "personName": "ကိုထွန်း(စိတ်အေးငြိမ်)",
-            "personPhone": "09943211757",
-            "description": "အခြားမှဝင်ငွေ",
-            "category": "money",
-            "type": "in",
-            "amount": 5000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-07",
-            "personName": "ကိုထွန်း(စိတ်အေးငြိမ်)",
-            "personPhone": "09943211757",
-            "description": "K.P ထဲထည့်အခြား Aye Chan Moe",
-            "category": "money",
-            "type": "out",
-            "amount": 1000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-07",
-            "personName": "ကိုထွန်း(စိတ်အေးငြိမ်)",
-            "personPhone": "09943211757",
-            "description": "KBZထဲထည့်အခြား Pro1",
-            "category": "money",
-            "type": "out",
-            "amount": 7500000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-08-14",
-            "personName": "မင်းမင်းဇော်",
-            "personPhone": "09774902010",
-            "description": "MLမှဝင်ငွေ 2525",
-            "category": "money",
-            "type": "in",
-            "amount": 150150000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-08-15",
-            "personName": "မင်းမင်းဇော်",
-            "personPhone": "09774902010",
-            "description": "KBZထဲထည့်အခြား MMZ",
-            "category": "money",
-            "type": "out",
-            "amount": 20000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-08-17",
-            "personName": "မင်းမင်းဇော်",
-            "personPhone": "09774902010",
-            "description": "KBZထဲထည့်အခြား MMZ",
-            "category": "money",
-            "type": "out",
-            "amount": 40000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-06-05",
-            "personName": "မဘုတ်ဆုံ",
-            "personPhone": "09783751110",
-            "description": "အပ်ရွှေ အဟောင်း AC (OLD)",
-            "category": "gold",
-            "type": "gold_in",
-            "amount": 0,
-            "goldKyat": 10,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-04-19",
-            "personName": "ကိုကျော်ဇင်လတ်+မယွန်းမီမီဦး",
-            "personPhone": "09760115605",
-            "description": "အပ်ရွှေ အဟောင်း AC (OLD)",
-            "category": "gold",
-            "type": "gold_in",
-            "amount": 0,
-            "goldKyat": 14,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-04-16",
-            "personName": "ကိုကျော်ဇင်လတ်+မယွန်းမီမီဦး",
-            "personPhone": "09760115605",
-            "description": "အပ်ရွှေ အဟောင်း AC (OLD)",
-            "category": "gold",
-            "type": "gold_in",
-            "amount": 0,
-            "goldKyat": 16,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-07",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "KBZထဲထည့်အခြား NAY TUN KYAW BWARR",
-            "category": "money",
-            "type": "out",
-            "amount": 4688400,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-09",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "အိမ်မှာလာထုတ် kcc",
-            "category": "money",
-            "type": "out",
-            "amount": 10000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-09",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "KBZထဲထည့်အခြား SIS LWIN HTOO",
-            "category": "money",
-            "type": "out",
-            "amount": 20000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-11",
-            "personName": "စင်းကြူဦး",
-            "personPhone": "09258174221",
-            "description": "အိမ်မှာလာထုတ် ကိုအောင်နိုင်",
-            "category": "money",
-            "type": "out",
-            "amount": 5000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-13",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "KBZထဲထည့်အခြား Daw Mya Thein",
-            "category": "money",
-            "type": "out",
-            "amount": 5000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-14",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "KBZထဲထည့်အခြား kcc",
-            "category": "money",
-            "type": "out",
-            "amount": 5000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-14",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "အိမ်မှာလာထုတ် kcc",
-            "category": "money",
-            "type": "out",
-            "amount": 10000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-14",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "SYထံရွှေရောင်း 5×10030000/",
-            "category": "money",
-            "type": "in",
-            "amount": 50150000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-14",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "ယူရွှေ အဟောင်း AC (OLD) Syကိုပေး",
-            "category": "gold",
-            "type": "gold_out",
-            "amount": 0,
-            "goldKyat": 5,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-14",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "K.P ထဲထည့်အခြား kcc",
-            "category": "money",
-            "type": "out",
-            "amount": 2000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-16",
-            "personName": "မင်းမင်းဇော်",
-            "personPhone": "09774902010",
-            "description": "အိမ်မှာလာထုတ် ဘင်ဘန်း",
-            "category": "money",
-            "type": "out",
-            "amount": 3000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-17",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "ယူရွှေ အဟောင်း AC (OLD)  မဇင်ဇင်",
-            "category": "gold",
-            "type": "gold_out",
-            "amount": 0,
-            "goldKyat": 20,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-17",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "K.P ထဲထည့်အခြား kcc",
-            "category": "money",
-            "type": "out",
-            "amount": 3000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-17",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "K.P ထဲထည့်အခြား khant min thwin",
-            "category": "money",
-            "type": "out",
-            "amount": 1900000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-18",
-            "personName": "မင်းမင်းဇော်",
-            "personPhone": "09774902010",
-            "description": "KBZထဲထည့်အခြား MMZ",
-            "category": "money",
-            "type": "out",
-            "amount": 50000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-20",
-            "personName": "စင်းကြူဦး",
-            "personPhone": "09258174221",
-            "description": "K.P ထဲထည့်အခြား 6938 PPH",
-            "category": "money",
-            "type": "out",
-            "amount": 300000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-20",
-            "personName": "စင်းကြူဦး",
-            "personPhone": "09258174221",
-            "description": "MLမှဝင်ငွေ 7005",
-            "category": "money",
-            "type": "in",
-            "amount": 9000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-20",
-            "personName": "စင်းကြူဦး",
-            "personPhone": "09258174221",
-            "description": "အပ်ရွှေ အဟောင်း J (OLD)",
-            "category": "gold",
-            "type": "gold_in",
-            "amount": 0,
-            "goldKyat": 5,
-            "goldPe": 14,
-            "goldYway": 7
-          },
-          {
-            "date": "2026-09-21",
-            "personName": "စင်းကြူဦး",
-            "personPhone": "09258174221",
-            "description": "အိမ်မှာလာထုတ် ရွှေလှော်ခ",
-            "category": "money",
-            "type": "out",
-            "amount": 49000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-22",
-            "personName": "ကိုထွန်း(စိတ်အေးငြိမ်)",
-            "personPhone": "09943211757",
-            "description": "အပ်ရွှေ အဟောင်း AC (OLD) 10070000/",
-            "category": "gold",
-            "type": "gold_in",
-            "amount": 0,
-            "goldKyat": 12,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-22",
-            "personName": "ကိုထွန်း(စိတ်အေးငြိမ်)",
-            "personPhone": "09943211757",
-            "description": "SY ထံမှရွှေဝယ် 12×10070000/",
-            "category": "money",
-            "type": "out",
-            "amount": 120840000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-22",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "အိမ်မှာလာထုတ် kcc",
-            "category": "money",
-            "type": "out",
-            "amount": 40000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-22",
-            "personName": "စင်းကြူဦး",
-            "personPhone": "09258174221",
-            "description": "KBZထဲထည့်အခြား အောင်ကျော်ထွန်း",
-            "category": "money",
-            "type": "out",
-            "amount": 90000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-22",
-            "personName": "စင်းကြူဦး",
-            "personPhone": "09258174221",
-            "description": "MLမှဝင်ငွေ 2588",
-            "category": "money",
-            "type": "in",
-            "amount": 60000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-22",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "K.P ထဲထည့်အခြား ထွန်းထွန်းနိုင်",
-            "category": "money",
-            "type": "out",
-            "amount": 5000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-22",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "K.P ထဲထည့်အခြား ကိုမျိုးတင့်",
-            "category": "money",
-            "type": "out",
-            "amount": 5000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-23",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "KBZထဲထည့်အခြား နေခြည်လင်း",
-            "category": "money",
-            "type": "out",
-            "amount": 25296000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-23",
-            "personName": "ကိုထွန်း(စိတ်အေးငြိမ်)",
-            "personPhone": "09943211757",
-            "description": "KBZမှဝင်ငွေ 200+500+500",
-            "category": "money",
-            "type": "in",
-            "amount": 120000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-23",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "K.P ထဲထည့်အခြား kcc",
-            "category": "money",
-            "type": "out",
-            "amount": 5000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-23",
-            "personName": "စင်းကြူဦး",
-            "personPhone": "09258174221",
-            "description": "K.P ထဲထည့်အခြား အောင်နိုင်",
-            "category": "money",
-            "type": "out",
-            "amount": 5000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-23",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "ယူရွှေ အဟောင်း AC (OLD) 10050000/",
-            "category": "gold",
-            "type": "gold_out",
-            "amount": 0,
-            "goldKyat": 10,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-23",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "SYထံရွှေရောင်း 10×10050000",
-            "category": "money",
-            "type": "in",
-            "amount": 100500000,
-            "goldKyat": 10,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-24",
-            "personName": "မင်းမင်းဇော်",
-            "personPhone": "09774902010",
-            "description": "အိမ်မှာလာထုတ် k2 ဘင်ဘန်း",
-            "category": "money",
-            "type": "out",
-            "amount": 10000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-24",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "KBZထဲထည့်အခြား kcc",
-            "category": "money",
-            "type": "out",
-            "amount": 4365600,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-26",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "KBZထဲထည့်အခြား  Lai Lai Htun",
-            "category": "money",
-            "type": "out",
-            "amount": 8490000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-27",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "K.P ထဲထည့်အခြား Akari Htun",
-            "category": "money",
-            "type": "out",
-            "amount": 1700000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-27",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "K.P ထဲထည့်အခြား Aye Chan Myat",
-            "category": "money",
-            "type": "out",
-            "amount": 1371000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-27",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "K.P ထဲထည့်အခြား Chan Mya Aye",
-            "category": "money",
-            "type": "out",
-            "amount": 782000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-27",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "KBZထဲထည့်အခြား နွယ်နွယ်အောင်",
-            "category": "money",
-            "type": "out",
-            "amount": 8044000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-28",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "KBZထဲထည့်အခြား kyaw naing soe",
-            "category": "money",
-            "type": "out",
-            "amount": 5329850,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-09-30",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "K.P ထဲထည့်အခြား Kcc",
-            "category": "money",
-            "type": "out",
-            "amount": 1500000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-10-02",
-            "personName": "စင်းကြူဦး",
-            "personPhone": "09258174221",
-            "description": "KBZထဲထည့်အခြား ယဥ်မေဝင်း",
-            "category": "money",
-            "type": "out",
-            "amount": 5000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-10-04",
-            "personName": "စစ်မင်းပိုင်",
-            "personPhone": "09669666888",
-            "description": "K.Pမှဝင်ငွေ စစ်မင်းပိုင်",
-            "category": "money",
-            "type": "in",
-            "amount": 900000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-10-07",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "ယူရွှေ အဟောင်း AC (OLD) အားကိုင်သွားပေး",
-            "category": "gold",
-            "type": "gold_out",
-            "amount": 0,
-            "goldKyat": 20,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-10-07",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "KBZထဲထည့်အခြား Daw Su Su",
-            "category": "money",
-            "type": "out",
-            "amount": 50000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-10-03",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "K.P ထဲထည့်အခြား မြတ်စိုးဟန်",
-            "category": "money",
-            "type": "out",
-            "amount": 4500000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-10-07",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "KBZထဲထည့်အခြား Sai Kyaw Naing",
-            "category": "money",
-            "type": "out",
-            "amount": 50000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-10-07",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "ယူရွှေ အဟောင်း AC (OLD) 10005000/",
-            "category": "gold",
-            "type": "gold_out",
-            "amount": 0,
-            "goldKyat": 10,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-10-07",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "SYထံရွှေရောင်း 10×10005000/",
-            "category": "money",
-            "type": "in",
-            "amount": 100050000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-10-08",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "K.P ထဲထည့်အခြား Thet Su Hnin",
-            "category": "money",
-            "type": "out",
-            "amount": 2000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-10-08",
-            "personName": "koချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "KBZထဲထည့်အခြား Thet Su Hnin",
-            "category": "money",
-            "type": "out",
-            "amount": 5250000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-10-08",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "K.P ထဲထည့်အခြား myat soe han",
-            "category": "money",
-            "type": "out",
-            "amount": 4000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-10-09",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "ကိုရေခဲ+မဝိုင်းထံ ယူငွေ",
-            "category": "money",
-            "type": "out",
-            "amount": 60000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-10-09",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "SYထံရွှေရောင်း 10×10030000/",
-            "category": "money",
-            "type": "in",
-            "amount": 100300000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-10-09",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "ယူရွှေ အဟောင်း AC (OLD) 10030000/",
-            "category": "gold",
-            "type": "gold_out",
-            "amount": 0,
-            "goldKyat": 10,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-10-10",
-            "personName": "ကိုချမ်းချမ်း",
-            "personPhone": "09788788733",
-            "description": "K.P ထဲထည့်အခြား ထွန်းထွန်းနိုင်",
-            "category": "money",
-            "type": "out",
-            "amount": 5000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
-          },
-          {
-            "date": "2026-10-10",
-            "personName": "စင်းကြူဦး",
-            "personPhone": "09258174221",
-            "description": "K.P ထဲထည့်အခြား ကိုအောင်နိုင်",
-            "category": "money",
-            "type": "out",
-            "amount": 5000000,
-            "goldKyat": 0,
-            "goldPe": 0,
-            "goldYway": 0
           }
         ];
 
         let records = JSON.parse(localStorage.getItem('side_ledger_v6')) || defaultLedgerData;
         let deletedRecords = JSON.parse(localStorage.getItem('deleted_ledger_v6')) || [];
-        let customGoldInOptions = JSON.parse(localStorage.getItem('custom_gold_in_v6')) || [];
-        let customGoldOutOptions = JSON.parse(localStorage.getItem('custom_gold_out_v6')) || [];
+        
+        let defaultGoldIn = ['အပ်ရွှေ အဟောင်း AC (OLD)', 'အပ်ရွှေ အသစ် AC (NEW)', 'အပ်ရွှေ J (OLD)'];
+        let defaultGoldOut = ['ယူရွှေ အဟောင်း AC (OLD)', 'ယူရွှေ အသစ် AC (NEW)', 'ယူရွှေ J (OLD)'];
+
+        let customGoldInOptions = JSON.parse(localStorage.getItem('custom_gold_in_v6')) || defaultGoldIn;
+        let customGoldOutOptions = JSON.parse(localStorage.getItem('custom_gold_out_v6')) || defaultGoldOut;
+
         let customPersonOrder = JSON.parse(localStorage.getItem('custom_person_order_v6')) || [];
         let editIndex = -1;
         let editingPersonName = '';
 
         document.getElementById('recordDate').valueAsDate = new Date();
 
-        // Load data from Firebase on startup, fallback to LocalStorage if offline
         db.ref('ledger_records').on('value', (snapshot) => {
             const serverData = snapshot.val();
-            if (serverData && Array.isArray(serverData)) {
+            if (serverData && Array.isArray(serverData) && serverData.length > 0) {
                 records = serverData;
                 localStorage.setItem('side_ledger_v6', JSON.stringify(records));
                 render();
@@ -2012,6 +917,8 @@
         function populateDropdowns() {
             const goldInSel = document.getElementById('goldInSelect');
             const goldOutSel = document.getElementById('goldOutSelect');
+            if(!goldInSel || !goldOutSel) return;
+
             goldInSel.innerHTML = '<option value="">+ အပ်ရွှေ ရွေးရန်</option>';
             goldOutSel.innerHTML = '<option value="">- ယူရွှေ ရွေးရန်</option>';
 
@@ -2026,6 +933,7 @@
         function renderManageDropdowns() {
             const inListEl = document.getElementById('manageGoldInList');
             const outListEl = document.getElementById('manageGoldOutList');
+            if(!inListEl || !outListEl) return;
             
             inListEl.innerHTML = customGoldInOptions.length === 0 ? '<div style="color:#64748b; font-size:8.5px; padding:3px; text-align:center;">စာရင်းမရှိသေးပါ။</div>' : '';
             customGoldInOptions.forEach((opt, idx) => {
@@ -2058,14 +966,18 @@
             if (type === 'goldIn') {
                 const val = document.getElementById('newGoldInText').value.trim();
                 if (!val) return;
-                customGoldInOptions.push(val);
-                localStorage.setItem('custom_gold_in_v6', JSON.stringify(customGoldInOptions));
+                if (!customGoldInOptions.includes(val)) {
+                    customGoldInOptions.push(val);
+                    localStorage.setItem('custom_gold_in_v6', JSON.stringify(customGoldInOptions));
+                }
                 document.getElementById('newGoldInText').value = '';
             } else {
                 const val = document.getElementById('newGoldOutText').value.trim();
                 if (!val) return;
-                customGoldOutOptions.push(val);
-                localStorage.setItem('custom_gold_out_v6', JSON.stringify(customGoldOutOptions));
+                if (!customGoldOutOptions.includes(val)) {
+                    customGoldOutOptions.push(val);
+                    localStorage.setItem('custom_gold_out_v6', JSON.stringify(customGoldOutOptions));
+                }
                 document.getElementById('newGoldOutText').value = '';
             }
             populateDropdowns();
@@ -2166,17 +1078,21 @@
         function handleDropdownChange(activeId) {
             const dropdowns = ['selectIn', 'selectOut', 'goldInSelect', 'goldOutSelect'];
             dropdowns.forEach(id => {
-                if (id !== activeId) document.getElementById(id).value = '';
+                if (id !== activeId) {
+                    const el = document.getElementById(id);
+                    if(el) el.value = '';
+                }
             });
             const activeEl = document.getElementById(activeId);
             const desc = document.getElementById('description');
             const amtFormatted = document.getElementById('amountFormatted');
-            if (activeEl.value) {
+            if (activeEl && activeEl.value) {
                 desc.value = activeEl.value;
                 desc.className = (activeId.includes('In')) ? 'theme-in' : 'theme-out';
                 amtFormatted.className = (activeId.includes('In')) ? 'theme-in' : 'theme-out';
             } else {
-                desc.value = ''; desc.className = ''; amtFormatted.className = '';
+                if(desc) { desc.value = ''; desc.className = ''; }
+                if(amtFormatted) { amtFormatted.className = ''; }
             }
         }
 
@@ -2283,6 +1199,7 @@
             const goldReportGrid = document.getElementById('goldReportGrid');
             const moneyReportGrid = document.getElementById('moneyReportGrid');
             
+            if(!container) return;
             container.innerHTML = '';
             goldReportGrid.innerHTML = '';
             moneyReportGrid.innerHTML = '';
@@ -2341,10 +1258,6 @@
                 }
             });
             orderedList = orderedList.concat(sortedNames);
-
-            const netOld = grandOldIn - grandOldOut;
-            const netNew = grandNewIn - grandNewOut;
-            const netMid = grandMidIn - grandMidOut;
 
             let sumTotalMoneyBal = 0;
             let sumTotalOld = 0, sumTotalNew = 0, sumTotalMid = 0;
@@ -2416,23 +1329,27 @@
             });
 
             const moneyHeaderTotal = document.getElementById('moneyHeaderTotal');
-            moneyHeaderTotal.innerHTML = `စုစုပေါင်းငွေလက်ကျန်: <strong class="${sumTotalMoneyBal >= 0 ? 'val-in' : 'val-out'}">${(sumTotalMoneyBal >= 0 ? '+' : '') + sumTotalMoneyBal.toLocaleString()} ကျပ်</strong>`;
+            if(moneyHeaderTotal) {
+                moneyHeaderTotal.innerHTML = `စုစုပေါင်းငွေလက်ကျန်: <strong class="${sumTotalMoneyBal >= 0 ? 'val-in' : 'val-out'}">${(sumTotalMoneyBal >= 0 ? '+' : '') + sumTotalMoneyBal.toLocaleString()} ကျပ်</strong>`;
+            }
 
             const goldHeaderTotal = document.getElementById('goldHeaderTotal');
-            goldHeaderTotal.innerHTML = `
-                <div class="gold-total-row">
-                    <span class="gold-total-label">OLD AC:</span>
-                    <span class="gold-total-value ${sumTotalOld>=0?'val-in':'val-out'}">${formatGold(sumTotalOld)}</span>
-                </div>
-                <div class="gold-total-row">
-                    <span class="gold-total-label">NEW AC:</span>
-                    <span class="gold-total-value ${sumTotalNew>=0?'val-in':'val-out'}">${formatGold(sumTotalNew)}</span>
-                </div>
-                <div class="gold-total-row">
-                    <span class="gold-total-label">J ရွှေ:</span>
-                    <span class="gold-total-value ${sumTotalMid>=0?'val-in':'val-out'}">${formatGold(sumTotalMid)}</span>
-                </div>
-            `;
+            if(goldHeaderTotal) {
+                goldHeaderTotal.innerHTML = `
+                    <div class="gold-total-row">
+                        <span class="gold-total-label">OLD AC:</span>
+                        <span class="gold-total-value ${sumTotalOld>=0?'val-in':'val-out'}">${formatGold(sumTotalOld)}</span>
+                    </div>
+                    <div class="gold-total-row">
+                        <span class="gold-total-label">NEW AC:</span>
+                        <span class="gold-total-value ${sumTotalNew>=0?'val-in':'val-out'}">${formatGold(sumTotalNew)}</span>
+                    </div>
+                    <div class="gold-total-row">
+                        <span class="gold-total-label">J ရွှေ:</span>
+                        <span class="gold-total-value ${sumTotalMid>=0?'val-in':'val-out'}">${formatGold(sumTotalMid)}</span>
+                    </div>
+                `;
+            }
 
             localStorage.setItem('side_ledger_v6', JSON.stringify(records));
         }
